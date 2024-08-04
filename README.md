@@ -33,18 +33,18 @@ npm start
 4.The API will be available at http://localhost:3000
 
 API Endpoints
-1.User Registration: POST /api/auth/register(curl -X POST http://localhost:3000/api/auth/register -H "Content-Type: application/json" -d "{\"username\":\"user1\", \"password\":\"password123\"}").
+1.User Registration: POST /api/auth/register(curl -X POST http://localhost:3000/api/auth/register -H "Content-Type: application/json" -d "{/\"username/\":/\"user1/\", /\"password/\":/\"password123/\"}").
 
-2.User Login: POST /api/auth/login(curl -X POST http://localhost:3000/api/auth/login -H "Content-Type: application/json" -d "{\"username\":\"user1\", \"password\":\"password123\"}").
+2.User Login: POST /api/auth/login(curl -X POST http://localhost:3000/api/auth/login -H "Content-Type: application/json" -d "{/\"username/\":/\"user1/\", /\"password/\":/\"password123/\"}").
 
-3.Create Task: POST /api/tasks(curl -X POST http://localhost:3000/api/tasks -H "Content-Type: application/json" -H "Authorization: Bearer <JWT-TOKEN>" -d "{\"title\":\"Sample Task\",\"description\":\"This is a sample task description.\",\"status\":\"Todo\",\"priority\":1,\"dueDate\":\"2024-08-10T00:00:00Z\"}").
+3.Create Task: POST /api/tasks(curl -X POST http://localhost:3000/api/tasks -H "Content-Type: application/json" -H "Authorization: Bearer <JWT-TOKEN>" -d "{/\"title/\":/\"Sample Task/\",/\"description/\":/\"This is a sample task description./\",/\"status/\":/\"Todo/\",/\"priority/\":1,/\"dueDate/\":/\"2024-08-10T00:00:00Z/\"}").
 
 4.Get All Tasks: GET /api/tasks(curl -X GET http://localhost:3000/api/tasks -H "Authorization: Bearer <JWT-TOKEN>").
 With pagination(curl -X GET http://localhost:3000/api/tasks?page=1&limit=10 -H "Authorization: Bearer <JWT-TOKEN>")
 
 5.Get Task by ID: GET /api/tasks/:id(curl -X GET http://localhost:3000/api/tasks/<task_id> -H "Authorization: Bearer <JWT-Token>").
 
-6.Update Task: PUT /api/tasks/:id(curl -X PUT http://localhost:3000/api/tasks/<task_id> -H "Content-Type: application/json" -H "Authorization: Bearer <JWT-Token>" -d "{\"title\":\"Updated Task\",\"description\":\"Updated description\",\"status\":\"In Progress\",\"priority\":2,\"dueDate\":\"2024-08-15T00:00:00Z\"}").
+6.Update Task: PUT /api/tasks/:id(curl -X PUT http://localhost:3000/api/tasks/<task_id> -H "Content-Type: application/json" -H "Authorization: Bearer <JWT-Token>" -d "{/\"title/\":/\"Updated Task/\",/\"description/\":/\"Updated description/\",/\"status/\":/\"In Progress/\",/\"priority/\":2,/\"dueDate/\":/\"2024-08-15T00:00:00Z/\"}").
 
 7.Delete Task: DELETE /api/tasks/:id(curl -X DELETE http://localhost:3000/api/tasks/<task_id> -H "Authorization: Bearer <JWT-Token>").
 
