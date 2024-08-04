@@ -10,7 +10,6 @@ router.get('/', taskController.getTasks);
 router.put('/:id', taskController.updateTask);
 router.delete('/:id', taskController.deleteTask);
 router.get('/:id',taskController.getTaskById);
-router.get('/filter/:priority/:status',taskController.getFilteredTasks);
-router.get('/search',taskController.searchTasks);
+
 
 module.exports = router;
