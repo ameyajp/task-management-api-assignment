@@ -48,6 +48,6 @@ With pagination(curl -X GET http://localhost:3000/api/tasks?page=1&limit=10 -H "
 
 7.Delete Task: DELETE /api/tasks/:id(curl -X DELETE http://localhost:3000/api/tasks/<task_id> -H "Authorization: Bearer <JWT-Token>").
 
-8.Filter Task: GET /filter/:priority/:status(curl -X GET "http://localhost:3000/api/tasks/filter/<priority_number>/<status_reqd>" -H "Authorization: Bearer <JWT-Token>").
+8.Filter Task: GET /api/tasks?priority=<priority_no(1to10)>&status=<status_reqd(Todo,In%20Progress,Done)>(curl -X GET "http://localhost:3000/api/tasks?priority=2&status=Todo" -H "Authorization: Bearer <JWT-Token>").
 
-9.Search Task:GET /search(curl -X GET "http://localhost:3000/api/tasks/search?query=Sample" -H "Authorization: Bearer <JWT-Token>").
+9.Search Task:GET api/tasks?query=<Word_to_search_in_title_Or_description_of_task>(curl -X GET "http://localhost:3000/api/tasks/search?query=This" -H "Authorization: Bearer <JWT-Token>").
